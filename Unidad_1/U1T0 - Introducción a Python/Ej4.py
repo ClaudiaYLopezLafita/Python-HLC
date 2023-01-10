@@ -2,5 +2,4 @@
 
 num = 8 
 
-print(f"El El número octal del número decimal {num} es {oct(num)}")
-
+print(f"El El número octal del número decimal {num} es {num:o}")

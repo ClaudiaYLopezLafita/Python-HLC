@@ -2,4 +2,5 @@
 
 num = 458.541315
 
-print(f"{num:.2f}")
+print(f"{num:.2f}") # mas eficiente
+print(round(num, 2))

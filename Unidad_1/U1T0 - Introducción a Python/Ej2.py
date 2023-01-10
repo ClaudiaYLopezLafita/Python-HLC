@@ -8,5 +8,6 @@
 totalMoney = 1000
 quantity = 3
 price = 450
+cad1 = "Tengo {1} euros para comprar {0} tarjetas gráficas por {2:.2f} dólares."
 
-print(f"Tengo {totalMoney} euros para comprar {quantity} tarjetas gráficas por {price:.2f} dólares.")
+print(cad1.format(quantity,totalMoney,price))
