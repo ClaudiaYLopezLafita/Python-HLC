@@ -9,3 +9,4 @@ for x in str:
 
 print(strN)
 
+## isdigit()

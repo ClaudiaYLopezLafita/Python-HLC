@@ -14,5 +14,3 @@ characterM1 = math.trunc(len(str2)/2)
 strNew=str1[0]+str2[0]+str1[characterM1]+str2[characterM2]+str1[len(str1)-1]+str2[len(str2)-1]
 
 print(strNew)
-
-

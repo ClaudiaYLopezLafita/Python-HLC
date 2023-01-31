@@ -3,12 +3,12 @@
 # Encuentra palabras con alfabetos y números
 
 str = input("Introduce una cadena: ")
-strN =""
+strN =[]
 
-for x in str.split(" "):
-    print(x)
-    if x.isalpha() and x.isnumeric() or x==" ":
-        print(x)
-        strN = strN+x
+temp = str.split()
+for item in temp:
+    if any(chr.isalpha() for chr in item) and any(chr.isdigit() for chr in item):
+        strN.append(item)
 
-print(strN)
+for i in strN:
+    print(i)

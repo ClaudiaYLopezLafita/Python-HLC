@@ -1,12 +1,13 @@
 # Ejercicio 18
 # Reemplace cada puntuación con # en la siguiente cadena
 
+from string import punctuation
+
 str = input("Introduce una cadena: ")
-strN =""
 
-for x in str:
-    if x.isalnum()==False or x==" ":
-        strN = strN+x
+chr ="#"
+for char in punctuation:
+    str = str.replace(char,chr)
 
-print(strN)
+print(str)
 
