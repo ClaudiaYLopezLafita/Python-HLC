@@ -4,7 +4,7 @@ import re
 import json
 
 # TORRENTE: EL BRAZO TONTO DE LA LEY
-# req = requests.get('https://www.filmaffinity.com/es/film334167.html')
+req = requests.get('https://www.filmaffinity.com/es/film334167.html')
 ## TO LESLIE
 # req = requests.get('https://www.filmaffinity.com/es/film925993.html')
 ### IRATI
@@ -12,8 +12,7 @@ import json
 ### THE SON
 # req = requests.get('https://www.filmaffinity.com/es/film766331.html')
 ## AVATAR: EL SENTIDO DEL AGUA
-req = requests.get('https://www.filmaffinity.com/es/film899895.html')
-
+# req = requests.get('https://www.filmaffinity.com/es/film899895.html')
 
 ## obtenemos el html y  lo metemos en un variable
 html_text = req.text
@@ -201,6 +200,7 @@ def productora(html_text):
     ##lista aux
     pro = []
     pro2 = []
+    pro3 = []
     ##filtro
     for elem in productora:
         if '</span' in elem:
@@ -208,9 +208,12 @@ def productora(html_text):
     ##filtro 2
     for elem in pro:
         if ',</span' not in elem:
-            elem = elem[:-6]
             pro2.append(elem)
-    productora = ', '.join(pro2)
+    for elem in pro2:
+        if '. </span' not in elem:
+            elem = elem[:-6]
+            pro3.append(elem)
+    productora = ', '.join(pro3)
     return productora
 
 v_productora = productora(html_text)
@@ -235,7 +238,7 @@ def genero(html_text):
 
 v_genero = genero(html_text)
 values.append(v_genero)
-print(f"Genero: {genero(html_text)}")
+# print(f"Genero: {genero(html_text)}")
 
 def sinopsis(html_text):
     etiqueta_sinopsis ="<dt>Sinopsis</dt>"
