@@ -4,16 +4,16 @@ import re
 import json
 
 # TORRENTE: EL BRAZO TONTO DE LA LEY
-req = requests.get('https://www.filmaffinity.com/es/film334167.html')
+# req = requests.get('https://www.filmaffinity.com/es/film334167.html')
 ## TO LESLIE
-# req = requests.get('https://www.filmaffinity.com/es/film925993.html')
+req = requests.get('https://www.filmaffinity.com/es/film925993.html')
 ### IRATI
 # req = requests.get('https://www.filmaffinity.com/es/film401654.html')
 ### THE SON
 # req = requests.get('https://www.filmaffinity.com/es/film766331.html')
 ## AVATAR: EL SENTIDO DEL AGUA
 # req = requests.get('https://www.filmaffinity.com/es/film899895.html')
-
+# req = requests.get('')
 ## obtenemos el html y  lo metemos en un variable
 html_text = req.text
 
