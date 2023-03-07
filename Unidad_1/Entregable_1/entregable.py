@@ -14,6 +14,7 @@ req = requests.get('https://www.filmaffinity.com/es/film925993.html')
 ## AVATAR: EL SENTIDO DEL AGUA
 # req = requests.get('https://www.filmaffinity.com/es/film899895.html')
 # req = requests.get('')
+
 ## obtenemos el html y  lo metemos en un variable
 html_text = req.text
 
